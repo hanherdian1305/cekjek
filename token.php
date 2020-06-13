@@ -28,7 +28,7 @@ Nomor GoJek Kamu : " . $number . "
              fclose($fopen1);
              echo "
 ";
-             echo "Token Kamu : " . $token . "
+             echo "Token Kamuy : " . $token . "
 ";
              echo "Token Berhasil Disimpan Di File " . $live . " 
 ";
