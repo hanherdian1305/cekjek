@@ -22,6 +22,11 @@ $detail = curl('https://api.gojekapi.com/wallet/profile/detailed', null, $header
          $saldoo = json_decode($detail[0]);
                 $saldo = $saldoo->data->balance;
                     echo color("yellow","Sisa Saldo Gopay = $saldo \n");
+
+        $boba09 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"STAYGOFOOD201105SC"}');
+        $messageboba09 = fetch_value($boba09,'"message":"','"');
+        echo "\n".color("green","# Message: ".$messageboba09);
+        sleep(3);
 //CHECKER VOUCHER YANG ADA
 $detail_voucher = curl('https://api.gojekapi.com/gopoints/v3/wallet/vouchers?limit=10&page=1', null, $header);
      $vouchers = json_decode($detail_voucher[0]);
